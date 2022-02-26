@@ -1,0 +1,40 @@
+{
+    "name": "coldfusion-simple",
+    "displayName": "ColdFusion",
+    "description": "ColdFusion language",
+    "version": "0.0.1",
+    "author": "Matthew Hickson",
+    "publisher": "Matthew Hickson",
+    "license": "MIT",
+    "engines": {
+        "vscode": "^1.63"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/mwhickson/coldfusion-simple.git"
+    },
+    "keywords": [
+        "coldfusion",
+        "cfml",
+        "cfscript"
+    ],
+    "contributes": {
+        "languages": [
+          {
+            "id": "coldfusion",
+            "extensions": [
+              ".cfml",
+              ".cfm",
+              ".cfc"
+            ]
+          }
+        ],
+        "grammars": [
+            {
+                "language": "coldfusion",
+                "scopeName": "source.coldfusion",
+                "path": "./syntaxes/coldfusion.tmLanguage.json"
+            }
+        ]
+    }    
+}

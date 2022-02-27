@@ -139,108 +139,208 @@
             },
             "keywords-control": {
                 "name": "keyword.control.coldfusion",
-                "match": "\\b(?i:(break|case|catch|continue|do|else|finally|for|if|in|rethrow|return|switch|throw|try|var|while|with))\\b"
+                "match": "\\b(?i:(break|case|catch|continue|do|else|finally|for|if|in|new|rethrow|return|switch|throw|try|var|while|with))\\b"
             },
             "keywords-coldfusion": {
                 "patterns": [
+                    { "include": "#keywords-coldfusion-array-functions" },
+                    { "include": "#keywords-coldfusion-cache-functions" },
+                    { "include": "#keywords-coldfusion-conversion-functions" },
+                    { "include": "#keywords-coldfusion-date-time-functions" },
+                    { "include": "#keywords-coldfusion-data-output-functions" },
+                    { "include": "#keywords-coldfusion-debugging-functions" },
+                    { "include": "#keywords-coldfusion-decision-functions" },
+                    { "include": "#keywords-coldfusion-display-formatting-functions" },
+                    { "include": "#keywords-coldfusion-dynamic-evaluation-functions" },
+                    { "include": "#keywords-coldfusion-exception-handling-functions" },
+                    { "include": "#keywords-coldfusion-extensibility-functions" },
+                    { "include": "#keywords-coldfusion-file-functions" },
+                    { "include": "#keywords-coldfusion-flow-control-functions" },
+                    { "include": "#keywords-coldfusion-image-functions" },
+                    { "include": "#keywords-coldfusion-international-functions" },
+                    { "include": "#keywords-coldfusion-list-functions" },
+                    { "include": "#keywords-coldfusion-mathematical-functions" },
+                    { "include": "#keywords-coldfusion-msoffice-integration-functions" },
+                    { "include": "#keywords-coldfusion-orm-functions" },
+                    { "include": "#keywords-coldfusion-other-functions" },
+                    { "include": "#keywords-coldfusion-query-functions" },
+                    { "include": "#keywords-coldfusion-security-functions" },
+                    { "include": "#keywords-coldfusion-spreadsheet-functions" },
+                    { "include": "#keywords-coldfusion-string-functions" },
+                    { "include": "#keywords-coldfusion-stucture-functions" },
+                    { "include": "#keywords-coldfusion-system-functions" },
+                    { "include": "#keywords-coldfusion-transaction-functions" },
+                    { "include": "#keywords-coldfusion-xml-functions" },
+                    { "include": "#keywords-coldfusion-s3-functions" },
+                    { "include": "#keywords-coldfusion-saml-functions" },
+                    { "include": "#keywords-coldfusion-operators" }
+                ]
+            },
+                "keywords-coldfusion-array-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(arrayappend|arrayavg|arrayclear|arraycontains|arraycontainsnocase|arraydelete|arraydeleteat|arraydeletenocase|arrayeach|arrayfilter|arrayfind|arrayfindall|arrayfindallnocase|arrayfindnocase|arrayfirst|arraygetmetadata|arrayinsertat|arrayisdefined|arrayisempty|arraylast|arraylen|arraymap|arraymax|arraymin|arraynew|arrayprepend|arrayresize|arrayset|arraysetmetadata|arrayslice|arraysort|arraysum|arrayswap|arraytolist|isarray|listtoarray|arrayshift|arrayunshift))\\b"
+                },
+                "keywords-coldfusion-cache-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(cacheget|cachegetallids|cachegetengineproperties|cachegetmetadata|cachegetproperties|cachegetsession|cacheidexists|cacheput|cacheregionexists|cacheregionnew|cacheregionremove|cacheremove|cacheremoveall|cachesetproperties))\\b"
+                },
+                "keywords-coldfusion-conversion-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(arraytolist|binarydecode|binaryencode|charsetdecode|charsetencode|deserializejson|dotnettocftype|hash|hmac|lcase|listtoarray|serializejson|tobase64|tobinary|toscript|tostring|urldecode|urlencodedformat|val|xmlformat|xmlparse))\\b"
+                },
+                "keywords-coldfusion-date-time-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(createdate|createdatetime|createodbcdate|createodbcdatetime|createodbctime|createtime|createtimespan|dateadd|datecompare|dateconvert|datediff|dateformat|datepart|datetimeformat|day|dayofweek|dayofweekasstring|dayofyear|daysinmonth|daysinyear|firstdayofmonth|gethttptimestring|gettickcount|gettimezoneinfo|hour|isdate|isdateobject|isleapyear|isnumericdate|lsdateformat|lsisdate|lsparsedatetime|lstimeformat|minute|month|monthasstring|now|parsedatetime|quarter|second|setday|sethour|setminute|setmonth|setsecond|setyear|timeformat|week|year))\\b"
+                },
+                "keywords-coldfusion-data-output-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(writedump|writelog|writeoutput))\\b"
+                },
+                "keywords-coldfusion-debugging-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(trace))\\b"
+                },
+                "keywords-coldfusion-decision-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(directoryexists|fileexists|fileiseof|iif|isarray|isbinary|isboolean|isclosure|iscustomfunction|isdate|isdateobject|isddx|isdebugmode|isdefined|isfileobject|isinstanceof|isipv6|isjson|islocalhost|isk2serverabroker|isk2serverdoccountexceeded|isk2serveronline|isleapyear|isnull|isnumeric|isnumericdate|isobject|ispdfarchive|ispdffile|ispdfobject|isquery|issimplevalue|isstruct|isuserinanyrole|isvalid|iswddx|isxml|isxmlattribute|isxmldoc|isxmlelem|isxmlnode|isxmlroot|lsiscurrency|lsisdate|lsisnumeric|structisempty|structkeyexists))\\b"
+                },
+                "keywords-coldfusion-display-formatting-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(ajaxlink|ajaxonload|booleanformat|canonicalize|cjustify|dateformat|decimalformat|dollarformat|encodeforcss|encodefordn|encodeforhtml|encodeforhtmlattribute|encodeforjavascript|encodeforldap|encodeforurl|encodeforxml|encodeforxmlattribute|encodeforxpath|formatbasen|getlocale|getlocaledisplayname|htmlcodeformat|htmleditformat|lsisdate|lsnumberformat|lsparsecurrency|lsparsedatetime|lsparseeurocurrency|lsparsenumber|lstimeformat|ljustify|lscurrencyformat|lsdateformat|lseurocurrencyformat|lsiscurrency|numberformat|paragraphformat|rjustify|stripcr|timeformat|yesnoformat))\\b"
+                },
+                "keywords-coldfusion-dynamic-evaluation-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(de|evaluate|iif|precisionevaluate|setvariable))\\b"
+                },
+                "keywords-coldfusion-exception-handling-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(throw))\\b"
+                },
+                "keywords-coldfusion-extensibility-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(createobject|dotnettocftype|getcomponentmetadata|getgatewayhelper|isinstanceof|releasecomobject|sendgatewaymessage|toscript))\\b"
+                },
+                "keywords-coldfusion-file-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(fileclose|filecopy|filedelete|fileexists|fileiseof|filemove|fileopen|fileread|filereadbinary|filereadline|fileseek|filesetaccessmode|filesetattribute|filesetlastmodified|fileskipbytes|fileupload|fileuploadall|filewrite|filewriteline|getcurrenttemplatepath|getfilefrompath|getfileinfo|getprofilesections|getprofilestring))\\b"
+                },
+                "keywords-coldfusion-flow-control-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(location))\\b"
+                },
+                "keywords-coldfusion-image-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(imageaddborder|imageblur|imageclearrect|imagecopy|imagecrop|imagedrawarc|imagedrawbeveledrect|imagedrawcubiccurve|imagedrawline|imagedrawlines|imagedrawoval|imagedrawpoint|imagedrawquadraticcurve|imagedrawrect|imagedrawroundrect|imagedrawtext|imageflip|imagegetblob|imagegetbufferedimage|imagegetexifmetadata|imagegetexiftag|imagegetheight|imagegetiptctag|imagegetiptcmetadata|imagegetwidth|imagegrayscale|imageinfo|imagenew|imagenegative|imageoverlay|imagepaste|imageread|imagereadbase64|imageresize|imagerotate|imagerotatedrawingaxis|imagescaletofit|imagesetantialiasing|imagesetbackgroundcolor|imagesetdrawingcolor|imagesetdrawingstroke|imagesetdrawingtransparency|imagesharpen|imageshear|imagesheardrawingaxis|imagetranslate|imagetranslatedrawingaxis|imagewrite|imagewritebase64|imagexordrawingmode|isimage|isimagefile))\\b"
+                },
+                "keywords-coldfusion-international-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(dateconvert|getencoding|gethttptimestring|getlocale|getlocaledisplayname|gettimezoneinfo|lscurrencyformat|lsdateformat|lseurocurrencyformat|lsiscurrency|lsisdate|lsisnumeric|lsnumberformat|lsparsecurrency|lsparsedatetime|lsparseeurocurrency|lsparsenumber|lstimeformat|setlocale))\\b"
+                },
+                "keywords-coldfusion-list-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(arraytolist|asc|chr|cjustify|compare|comparenocase|decrypt|encrypt|find|findnocase|findoneof|formatbasen|getclientvariableslist|lcase|left|len|listappend|listchangedelims|listcontains|listcontainsnocase|listdeleteat|listfilter|listfind|listfindnocase|listfirst|listgetat|listinsertat|listlast|listlen|listmap|listprepend|listqualify|listreduce|listrest|listremoveduplicates|listsetat|listsort|listtoarray|listvaluecount|listvaluecountnocase|replacelist|replacelistnocase|valuelist))\\b"
+                },
+                "keywords-coldfusion-mathematical-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(abs|acos|arrayavg|arraysum|asin|atn|bitand|bitmaskclear|bitmaskread|bitmaskset|bitnot|bitor|bitshln|bitshrn|bitxor|ceiling|cos|decrementvalue|exp|fix|floor|formatbasen|incrementvalue|inputbasen|int|log|log10|max|min|pi|precisionevaluate|rand|randomize|randrange|round|sgn|sin|sqr|tan))\\b"
+                },
+                "keywords-coldfusion-msoffice-integration-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(isspreadsheetfile|isspreadsheetobject|spreadsheetaddcolumn|spreadsheetaddfreezepane|spreadsheetaddimage|spreadsheetaddinfo|spreadsheetaddrow|spreadsheetaddrows|spreadsheetaddsplitpane|spreadsheetcreatesheet|spreadsheetdeletecolumn|spreadsheetdeletecolumns|spreadsheetdeleterow|spreadsheetdeleterows|spreadsheetformatcell|spreadsheetformatcellrange|spreadsheetformatcolumn|spreadsheetformatcolumns|spreadsheetformatrow|spreadsheetformatrows|spreadsheetgetcellcomment|spreadsheetgetcellformula|spreadsheetgetcellvalue|spreadsheetinfo|spreadsheetmergecells|spreadsheetnew|spreadsheetread|spreadsheetreadbinary|spreadsheetremovesheet|spreadsheetsetactivesheet|spreadsheetsetactivesheetnumber|spreadsheetsetcellcomment|spreadsheetsetcellformula|spreadsheetsetcellvalue|spreadsheetsetcolumnwidth|spreadsheetsetfooter|spreadsheetsetheader|spreadsheetsetrowheight|spreadsheetshiftcolumns|spreadsheetshiftrows|spreadsheetwrite))\\b"
+                },
+                "keywords-coldfusion-orm-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(entitydelete|entityload|entityloadbyexample|entityloadbypk|entitymerge|entitynew|entityreload|entitysave|entitytoquery|ormclearsession|ormcloseallsessions|ormclosesession|ormevictcollection|ormevictentity|ormevictqueries|ormexecutequery|ormflushall|ormflush|ormgetsession|ormgetsessionfactory|ormreload))\\b"
+                },
+                "keywords-coldfusion-other-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(applicationstop|createdynamicproxy|createuuid|deleteclientvariable|getapplicationmetadata|getbasetagdata|getbasetaglist|getbasetemplatepath|getclientvariableslist|getlocalhostip|islocalhost|objectequals|objectload|objectsave|preservesinglequotes|sessiongetmetadata|urlsessionformat|writedump|writelog|writeoutput))\\b"
+                },
+                "keywords-coldfusion-query-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(getmetadata|isquery|queryaddcolumn|queryaddrow|queryconvertforgrid|querydeletecolumn|querydeleterow|queryeach|queryexecute|queryfilter|querygetrow|querygetresult|querykeyexists|querymap|querynew|queryreduce|querysetcell|querysort|quotedvaluelist|valuearray|valuelist))\\b"
+                },
+                "keywords-coldfusion-security-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(canonicalize|decrypt|decodeforhtml|decodefromurl|encodeforcss|encodefordn|encodeforhtml|encodeforhtmlattribute|encodeforjavascript|encodeforldap|encodeforurl|encodeforxml|encodeforxmlattribute|encodeforxpath|decryptbinary|encrypt|encryptbinary|generatepbkdfkey|generatesecretkey|generatescrypthash|generatebcrypthash|getauthuser|gettempdirectory|gettempfile|getuserroles|getsafehtml|hash|hmac|isuserinanyrole|isuserinrole|isuserloggedin|issafehtml|sessioninvalidate|sessionrotate|verifyclient|verifybcrypthash|verifyscrypthash))\\b"
+                },
+                "keywords-coldfusion-spreadsheet-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(spreadsheetaddautofilter|spreadsheetaddcolumn|spreadsheetaddfreezepane|spreadsheetaddimage|spreadsheetaddinfo|spreadsheetaddpagebreaks|spreadsheetaddrow|spreadsheetaddrows|spreadsheetaddsplitpane|spreadsheetcreatesheet|spreadsheetdeletecolumn|spreadsheetdeletecolumns|spreadsheetdeleterow|spreadsheetdeleterows|spreadsheetformatcell|spreadsheetformatcellrange|spreadsheetformatcolumn|spreadsheetformatcolumns|spreadsheetformatrow|spreadsheetformatrows|spreadsheetgetcellcomment|spreadsheetgetcellformula|spreadsheetgetcellvalue|spreadsheetgetcolumncount|spreadsheetinfo|spreadsheetmergecells|spreadsheetnew|spreadsheetread|spreadsheetreadbinary|spreadsheetremovesheet|spreadsheetsetactivesheet|spreadsheetsetactivesheetnumber|spreadsheetsetcellcomment|spreadsheetsetcellformula|spreadsheetsetcellvalue|spreadsheetsetcolumnwidth|spreadsheetsetfooter|spreadsheetsetheader|spreadsheetsetrowheight|spreadsheetshiftcolumns|spreadsheetshiftrows|spreadsheetwrite))\\b"
+                },
+                "keywords-coldfusion-string-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(asc|binarydecode|binaryencode|canonicalize|charsetdecode|charsetencode|chr|cjustify|compare|comparenocase|dayofweekasstring|decrypt|encodeforcss|encodefordn|encodeforhtml|encodeforhtmlattribute|encodeforjavascript|encodeforldap|encodeforurl|encodeforxml|encodeforxmlattribute|encrypt|find|findnocase|findoneof|formatbasen|generatesecretkey|gettoken|hash|hmac|htmlcodeformat|htmleditformat|insert|jsstringformat|lcase|left|len|listvaluecount|listvaluecountnocase|ljustify|lsiscurrency|lsisdate|lsisnumeric|lsparsecurrency|lsparsedatetime|lsparseeurocurrency|lsparsenumber|ltrim|mid|monthasstring|paragraphformat|parsedatetime|refind|refindnocase|rematch|rematchnocase|removechars|repeatstring|replace|replacelist|replacenocase|rereplace|rereplacenocase|reverse|right|rjustify|rtrim|spanexcluding|spanincluding|stringsort|stringsome|stringreduce|stringmap|stringfilter|stringevery|stringeach|stripcr|tobase64|tobinary|tostring|trim|ucase|urldecode|urlencodedformat|val|wrap|xmlformat))\\b"
+                },
+                "keywords-coldfusion-stucture-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(duplicate|isstruct|structappend|structclear|structcopy|structcount|structdelete|structeach|structfind|structfindkey|structfindvalue|structfilter|structget|structgetmetadata|structinsert|structiscasesensitive|structisordered|structisempty|structkeyarray|structkeyexists|structkeylist|structmap|structnew|structsetmetadata|structsort|structreduce|structtosorted|structupdate))\\b"
+                },
+                "keywords-coldfusion-system-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(directorycopy|directorycreate|directorydelete|directoryexists|directorylist|directoryrename|duplicate|expandpath|fileclose|filecopy|filedelete|fileexists|fileiseof|filemove|fileopen|fileread|filereadbinary|filereadline|fileseek|filesetaccessmode|filesetattribute|filesetlastmodified|fileskipbytes|filewrite|getbasetemplatepath|getcanonicalpath|getcontextroot|getcurrenttemplatepath|getdirectoryfrompath|getencoding|getexception|getfilefrompath|getfileinfo|getfunctioncalledname|getfunctionlist|gethttprequestdata|getlocale|getlocaledisplayname|getmetadata|getmetricdata|getpagecontext|getprinterinfo|getprofilesections|getprofilestring|getreadableimageformats|gettempdirectory|gettempfile|gettemplatepath|gettickcount|getwriteableimageformats|setlocale|setprofilestring|sleep|writeoutput))\\b"
+                },
+                "keywords-coldfusion-transaction-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(transactioncommit|transactionrollback|transactionsetsavepoint))\\b"
+                },
+                "keywords-coldfusion-xml-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(addsoaprequestheader|addsoapresponseheader|getsoaprequest|getsoaprequestheader|getsoapresponse|getsoapresponseheader|issoaprequest|iswddx|isxml|isxmlattribute|isxmldoc|isxmlelem|isxmlnode|isxmlroot|tostring|xmlchildpos|xmlelemnew|xmlformat|xmlgetnodetype|xmlnew|xmlparse|xmlsearch|xmltransform|xmlvalidate))\\b"
+                },
+                "keywords-coldfusion-s3-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(tstoresetacl|storeaddacl|storegetmetadata|storegetacl|storesetmetadata))\\b"
+                },
+                "keywords-coldfusion-saml-functions": {
+                    "name": "support.function.coldfusion",
+                    "match": "\\b(?i:(initsamlauthrequest|getsamlauthrequest|processsamlresponse|initsamllogoutrequest|getsamllogoutrequest|issamllogoutresponse|sendsamllogoutresponse|processsamllogoutrequest|generatesamlspmetadata))\\b"
+                },
+
+            "keywords-coldfusion-operators": {
+                "patterns": [
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(abs|acos|addsoaprequestheader|addsoapresponseheader|ajaxlink|ajaxonload|applicationstarttime|applicationstop|array|arrayappend|arrayavg|arrayclear|arraycontains|arraycontainsnocase|arraydelete|arraydeleteat|arrayeach|arrayevery|arrayfilter|arrayfind|arrayfindall|arrayfindallnocase|arrayfindnocase|arrayfirst|arrayindexexists|arrayinsertat|arrayisdefined|arrayisempty|arraylast|arraylen|arraymap|arraymax|arraymedian|arraymerge|arraymid|arraymin|arraynew|arrayprepend|arrayreduce|arrayresize|arrayreverse|arrayset|arrayslice|arraysome|arraysort|arraysum|arrayswap|arraytolist|arraytostruct|asc|asin|atn))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "%=|\\+=|-=|\\*=|(?<!\\()/="
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(beat|binarydecode|binaryencode|bitand|bitmaskclear|bitmaskread|bitmaskset|bitnot|bitor|bitshln|bitshrn|bitxor))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "!=|<=|>=|==|<|>"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(cacheclear|cachecount|cachedelete|cacheget|cachegetall|cachegetallids|cachegetdefaultcachename|cachegetmetadata|cachegetproperties|cacheidexists|cachekeyexists|cacheput|cacheremove|cacheremoveall|cachesetproperties|callstackdump|callstackget|canonicalize|ceiling|cfusion_decrypt|cfusion_encrypt|charsetdecode|charsetencode|chr|cjustify|collectioneach|collectionevery|collectionfilter|collectionmap|collectionreduce|collectionsome|compare|comparenocase|componentcacheclear|componentcachelist|componentinfo|compress|contains|containsnocase|contractpath|cos|createdate|createdatetime|createdynamicproxy|createguid|createobject|createodbcdate|createodbcdatetime|createodbctime|createtime|createtimespan|createuniqueid|createuuid|csrfgeneratetoken|csrfverifytoken|ctcacheclear|ctcachelist))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "&&|!!|!|\\|\\|"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(datasourceflushmetacache|dateadd|datecompare|dateconvert|datediff|dateformat|datepart|datetimeformat|day|dayofweek|dayofweekasstring|dayofweekshortasstring|dayofyear|daysinmonth|daysinyear|de|decimalformat|decodefromurl|decrementvalue|decrypt|decryptbinary|delete|deleteat|deleteclientvariable|deserializejson|directorycopy|directorycreate|directorydelete|directoryexists|directorylist|directoryrename|dollarformat|dump|duplicate))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "=|:"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(each|echo|empty|encodeforcss|encodefordn|encodeforhtml|encodeforhtmlattribute|encodeforjavascript|encodeforldap|encodeforurl|encodeforxml|encodeforxmlattribute|encodeforxpath|encrypt|encryptbinary|entitydelete|entityload|entityloadbyexample|entityloadbypk|entitymerge|entitynamearray|entitynamelist|entitynew|entityreload|entitysave|entitytoquery|esapidecode|esapiencode|evaluate|exp|expandpath|extract))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "--"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(fileappend|fileclose|filecopy |filedelete|fileexists|filegetmimetype|fileiseof|filemove|fileopen|fileread|filereadbinary|filereadline|fileseek|filesetaccessmode|filesetattribute|filesetlastmodified|fileskipbytes|fileupload|fileuploadall|filewrite|filewriteline|filter|find|findnocase|findoneof|firstdayofmonth|fix|formatbasen))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "\\+\\+"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(generatesecretkey|getapplicationmetadata|getapplicationsettings|getauthuser|getbasetagdata|getbasetaglist|getbasetemplatepath|getbuiltinfunction|getcanonicalpath|getclasspath|getclientvariableslist|getcomponentmetadata|getcontextroot|getcpuusage|getcurrentcontext|getcurrenttemplatepath|getdirectoryfrompath|getencoding|getfilefrompath|getfileinfo|getfreespace|getfunctioncalledname|getfunctiondata|getfunctionkeywords|getfunctionlist|gethttprequestdata|gethttptimestring|getk2serverdoccount|getk2serverdoccountlimit|getlocale|getlocaledisplayname|getlocalhostip|getluceeid|getmemoryusage|getmetadata|getmetricdata|getnumericdate|getpagecontext|getprinterlist|getprofilesections|getprofilestring|getreadableimageformats|getsoaprequest|getsoaprequestheader|getsoapresponse|getsoapresponseheader|getsystemfreememory|getsystemtotalmemory|gettagdata|gettaglist|gettempdirectory|gettempfile|gettemplatepath|gettickcount|gettimezone|gettimezoneinfo|gettoken|gettotalspace|getuserroles|getvariable|getvfsmetadata|getwriteableimageformats))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "%|\\*|/|-|\\+|&"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(hash|hash40|hmac|hour|htmlcodeformat|htmleditformat|htmlparse))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "\\b(?i:(and|eqv|imp|not|or|xor))\\b"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(iif|imageaddborder|imageblur|imageclearrect|imagecopy|imagecrop|imagedrawarc|imagedrawbeveledrect|imagedrawcubiccurve|imagedrawimage|imagedrawline|imagedrawlines|imagedrawoval|imagedrawpoint|imagedrawquadraticcurve|imagedrawrect|imagedrawroundrect|imagedrawtext|imagefilter|imagefiltercolormap|imagefiltercurves|imagefilterkernel|imagefilterwarpgrid|imageflip|imagefonts|imageformats|imagegetblob|imagegetbufferedimage|imagegetexifmetadata|imagegetexiftag|imagegetheight|imagegetiptctag|imagegetwidth|imagegrayscale|imageinfo|imagenegative|imagenew|imageoverlay|imagepaste|imageread|imagereadbase64|imageresize|imagerotate|imagerotatedrawingaxis|imagescaletofit|imagesetantialiasing|imagesetbackgroundcolor|imagesetdrawingalpha|imagesetdrawingcolor|imagesetdrawingstroke|imagesetdrawingtransparency|imagesharpen|imageshear|imagesheardrawingaxis|imagetranslate|imagetranslatedrawingaxis|imagewrite|imagewritebase64|imagexordrawingmode|incrementvalue|inputbasen|insert|insertat|int|invoke|isarray|isbinary|isboolean|isclosure|iscustomfunction|isdate|isdebugmode|isdefined|isempty|isimage|isimagefile|isinstanceof|isipinrange|isipv6|isjson|isleapyear|islocalhost|isnotmap|isnull|isnumeric|isnumericdate|isobject|ispdfobject|isquery|issimplevalue|issoaprequest|isstruct|isuserinanyrole|isuserinrole|isuserloggedin|isvalid|isvideofile|iswddx|isxml|isxmlattribute|isxmldoc|isxmlelem|isxmlnode|isxmlroot|iszipfile))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "\\b(?i:(and|eq|equal|greater|gt|gte|is|less|lt|lte|neq|than))\\b"
                     },
                     {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(javacast|jsstringformat))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(lcase|left|len|listappend|listavg|listchangedelims|listcompact|listcontains|listcontainsnocase|listdeleteat|listeach|listevery|listfilter|listfind|listfindnocase|listfirst|listgetat|listindexexists|listinsertat|listitemtrim|listlast|listlen|listmap|listprepend|listqualify|listreduce|listremoveduplicates|listrest|listsetat|listsome|listsort|listtoarray|listtrim|listvaluecount|listvaluecountnocase|ljustify|location|log|log10|lscurrencyformat|lsdateformat|lsdatetimeformat|lsdayofweek|lseurocurrencyformat|lsiscurrency|lsisdate|lsisnumeric|lsnumberformat|lsparsecurrency|lsparsedatetime|lsparseeurocurrency|lsparsenumber|lstimeformat|lsweek|ltrim))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(map|max|metaphone|mid|millisecond|min|minute|month|monthasstring|monthshortasstring))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(newline|now|nowserver|nullvalue|numberformat))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(objectequals|objectload|objectsave|ormclearsession|ormcloseallsessions|ormclosesession|ormevictcollection|ormevictentity|ormevictqueries|ormexecutequery|ormflush|ormgetsession|ormgetsessionfactory|ormreload))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(pagepoolclear|pagepoollist|paragraphformat|parameterexists|parsedatetime|parsenumber|pi|precisionevaluate|preservesinglequotes))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(quarter|query|queryaddcolumn|queryaddrow|querycolumnarray|querycolumncount|querycolumndata|querycolumnexists|querycolumnlist|queryconvertforgrid|querycurrentrow|querydeletecolumn|querydeleterow|queryeach|queryevery|queryexecute|queryfilter|querygetcell|querygetrow|querymap|querynew|queryrecordcount|queryreduce|queryrowdata|querysetcell|queryslice|querysome|querysort|quotedvaluelist))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(rand|randomize|randrange|recordcount|reduce|refind|refindnocase|releasecomobject|rematch|rematchnocase|removechars|repeatstring|replace|replacelist|replacenocase|rereplace|rereplacenocase|restdeleteapplication|restinitapplication|restsetresponse|reverse|right|rjustify|round|rtrim))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(second|sendgatewaymessage|serialize|serializejson|sessioninvalidate|sessionrotate|sessionstarttime|setencoding|setlocale|setprofilestring|settimezone|setvariable|sgn|sin|sizeof|sleep|soundex|spanexcluding|spanincluding|spreadsheetnew|spreadsheetsetcellvalue|spreadsheetwrite|sqr|sslcertificateinstall|sslcertificatelist|storeaddacl|storegetacl|storesetacl|stringlen|stripcr|structappend|structclear|structcopy|structcount|structdelete|structeach|structevery|structfilter|structfind|structfindkey|structfindvalue|structget|structinsert|structisempty|structkeyarray|structkeyexists|structkeylist|structkeytranslate|structmap|structnew|structreduce|structsome|structsort|structupdate|systemcacheclear|systemoutput))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(tan|threadjoin|threadterminate|throw|timeformat|tobase64|tobinary|tonumeric|toscript|tostring|trace|transactioncommit|transactionrollback|transactionsetsavepoint|trim|truefalseformat))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(ucase|ucfirst|unserializejava|urldecode|urlencode|urlencodedformat|urlsessionformat))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(val|valuearray|valuelist|verifyclient))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(week|wrap|writebase64|writedump|writelog|writeoutput))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(xmlchildpos|xmlelemnew|xmlformat|xmlgetnodetype|xmlnew|xmlparse|xmlsearch|xmltransform|xmlvalidate))\\b"
-                    },
-                    {
-                        "name": "meta.support.coldfusion",
-                        "match": "\\b(?i:(year|yesnoformat))\\b"
+                        "name": "keyword.operator.coldfusion",
+                        "match": "\\?|:"
                     }
                 ]
-            }
+            }                
 
     }
 }
